@@ -1,0 +1,2 @@
+DEF .__.ABS. 0x0
+LOAD bin/g18.ihx

@@ -1,0 +1,24 @@
+ASxxxx Assembler V05.31  (RCA 1802 COSMAC)                              Page 1
+Hexadecimal [16-Bits]                                 Thu Aug 27 14:53:55 2026
+
+
+
+                              1     .area _CODE (REL,CON)
+                              2 
+   0000                       3 MAIN: 
+   0000 71            [ 2]    4     DIS                 ; Disable interrupts
+   0001 F8 00         [ 2]    5     LDI   #>BLINK     ; Shift right 8 bits to extract the High Byte
+   0003 B3            [ 2]    6     PHI   R3                
+   0004 F8 08         [ 2]    7     LDI   #<BLINK   ; Mask with 0xFF to extract the Low Byte
+   0006 A3            [ 2]    8     PLO   R3                
+                              9     
+   0007 D3            [ 2]   10     SEP   R3                ; Set Program Counter to R3 (jumps to BLINK) 
+                             11     
+   0008                      12 BLINK: 
+   0008 7B            [ 2]   13     SEQ                     ; Set Q line HIGH
+   0009 7A            [ 2]   14     REQ                     ; Reset Q line LOW
+   000A 30 08         [ 2]   15     BR    BLINK             ; Loop forever
+                             16     
+                             17     .END
+                             18 
+                             19 	.area _DATA(REL, CON)

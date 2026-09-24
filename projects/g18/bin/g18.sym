@@ -1,0 +1,19 @@
+ASxxxx Assembler V05.31  (RCA 1802 COSMAC)                              Page 1
+Hexadecimal [16-Bits]                                 Thu Aug 27 14:53:55 2026
+
+Symbol Table
+
+    .__.$$$.       =   2710 L   |     .__.ABS.       =   0000 G
+    .__.CPU.       =   0000 L   |     .__.H$L.       =   0001 L
+  0 BLINK              0008 R   |   0 MAIN               0000 R
+
+ASxxxx Assembler V05.31  (RCA 1802 COSMAC)                              Page 2
+Hexadecimal [16-Bits]                                 Thu Aug 27 14:53:55 2026
+
+Area Table
+
+[_CSEG]
+   0 _CODE            size    C   flags CD80
+[_DSEG]
+   1 _DATA            size    0   flags CCC0
+
